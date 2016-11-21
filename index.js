@@ -80,6 +80,5 @@ request(create_task, callback)
 
 dash.on("detected", function (){
     console.log("omg found")
-    create_test()
     addItem()
 });
