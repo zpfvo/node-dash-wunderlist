@@ -44,13 +44,24 @@ var updateList = () => {
   }
   else{
     console.log('list: "' + listTitle + '" with ID ' + listID + ' found!')
-    wunderlist.createTask(listID, newItem, state, starred)
+    wunderlist.getTasks(listID)
       .then( response => {
-        console.log('list updated')
-        console.log(response.body)
+        var item_titles = JSON.parse(response.body).map((item) => item['title'])
+        console.log(item_titles)
+        if (item_titles.indexOf(newItem) == -1) {
+          wunderlist.createTask(listID, newItem, state, starred)
+            .then( response => {
+              console.log('list updated')
+            })
+            .catch( error => {
+              console.log('list update failed')
+            })
+        } else {
+          console.log('Item already in list')
+        }
       })
       .catch( error => {
-        console.log('list update failed')
+        console.error(error)
       })
   }
 }
