@@ -66,28 +66,6 @@ var updateList = () => {
   }
 }
 
-/*
-var create_task = {
-  url: 'https://a.wunderlist.com/api/v1/tasks',
-  method: 'PUT',
-  headers: {
-    'Content-Type':'application/json',
-    'X-Client-ID': conf.wunderlist_auth.clientID,
-    'X-Access-Token': conf.wunderlist_auth.accessToken
-  }
-  ,body: JSON.stringify({'list_id': 271721562, 'title': 'test'})
-};
-
-function callback(error, response, body) {
-  console.log(response, body);
-  if (!error && response.statusCode == 200) {
-    console.log(body, response);
-  }
-}
-
-//request(create_task, callback)
-request(create_task, callback)
-*/
 
 dash.on("detected", function (){
     console.log("omg found")
