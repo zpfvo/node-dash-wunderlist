@@ -6,4 +6,5 @@ Use Amazon Dash Buttons to put things on your grocery wunderlist. Instead of buy
 ![Button Fridge](https://raw.githubusercontent.com/zpfvo/node-dash-wunderlist/master/doc/button_fridge.jpg)
 
 2. Item is pushed to list :)
+
 ![Wunderlist screenshot](https://raw.githubusercontent.com/zpfvo/node-dash-wunderlist/master/doc/wunderlist_screenshot.png)
